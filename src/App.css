@@ -14,9 +14,9 @@
   z-index: 1;
   box-shadow: 9px 11px 6px -1px rgba(128, 128, 128, 1);
   border-radius: 15px;
-  /* opacity: 0; */
-  /* animation: fadeInUp 1.5s 0.25s;
-  animation-fill-mode: forwards; */
+  opacity: 0;
+  animation: fadeInUp 1.5s 0.25s;
+  animation-fill-mode: forwards;
   font-size: 40px;
   margin-left: 15px;
   margin-right: 15px;
