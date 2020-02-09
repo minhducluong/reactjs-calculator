@@ -19,6 +19,13 @@ function App() {
     setDisplay('')
   }
 
+  const makeFadeEffect = () => {
+    setFadeEffect(true)
+    setTimeout(() => {
+      setFadeEffect(false)
+    }, 500);
+  }
+
   const calculate = () => {
     setDisplay(display => {
       let toBeCalculated = display
@@ -33,10 +40,7 @@ function App() {
       }
     })
 
-    setFadeEffect(true)
-    setTimeout(() => {
-      setFadeEffect(false)
-    }, 500);
+    makeFadeEffect()
   }
 
   const checkError = (result) => {
@@ -52,11 +56,13 @@ function App() {
     // eslint-disable-next-line
     let result = eval(display * display)
     checkError(result)
+    makeFadeEffect()
   }
 
   const sqrt = () => {
     let result = Math.sqrt(display)
     checkError(result)
+    makeFadeEffect()
   }
 
   const factorial = () => {
@@ -73,11 +79,13 @@ function App() {
       alert("Ông phá máy rồi!");
       setDisplay('')
     }
+    makeFadeEffect()
   }
 
   const percent = () => {
     let result = display / 100
     checkError(result)
+    makeFadeEffect()
   }
 
   useEffect(() => {
