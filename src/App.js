@@ -54,13 +54,13 @@ function App() {
 
   const sqr = () => {
     // eslint-disable-next-line
-    let result = eval(display * display)
+    let result = eval(display * display).toString()
     checkError(result)
     makeFadeEffect()
   }
 
   const sqrt = () => {
-    let result = Math.sqrt(display)
+    let result = Math.sqrt(display).toString()
     checkError(result)
     makeFadeEffect()
   }
@@ -74,7 +74,7 @@ function App() {
       for (let i = 1; i <= number; i++) {
         result *= i;
       }
-      setDisplay(result)
+      setDisplay(result.toString())
     } else {
       alert("Ông phá máy rồi!");
       setDisplay('')
@@ -84,7 +84,7 @@ function App() {
 
   const percent = () => {
     let result = display / 100
-    checkError(result)
+    checkError(result.toString())
     makeFadeEffect()
   }
 
