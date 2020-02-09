@@ -33,7 +33,7 @@ function App() {
       toBeCalculated = toBeCalculated.replace(/÷/g, "/")
       try {
         // eslint-disable-next-line
-        return eval(toBeCalculated).toString()
+        return eval(toBeCalculated)
       } catch(e) {
         alert("Ông phá máy rồi!")
         return ''
@@ -54,13 +54,13 @@ function App() {
 
   const sqr = () => {
     // eslint-disable-next-line
-    let result = eval(display * display).toString()
+    let result = eval(display * display)
     checkError(result)
     makeFadeEffect()
   }
 
   const sqrt = () => {
-    let result = Math.sqrt(display).toString()
+    let result = Math.sqrt(display)
     checkError(result)
     makeFadeEffect()
   }
@@ -74,7 +74,7 @@ function App() {
       for (let i = 1; i <= number; i++) {
         result *= i;
       }
-      setDisplay(result.toString())
+      setDisplay(result)
     } else {
       alert("Ông phá máy rồi!");
       setDisplay('')
@@ -84,7 +84,7 @@ function App() {
 
   const percent = () => {
     let result = display / 100
-    checkError(result.toString())
+    checkError(result)
     makeFadeEffect()
   }
 
@@ -107,7 +107,7 @@ function App() {
       // When use Backspace
       if (event.key === 'Backspace') {
         setDisplay(display => {
-          let arr = display.split('');
+          let arr = display.toString().split('');
           arr.pop();
           return arr.join('')
         })
